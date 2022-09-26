@@ -1,15 +1,30 @@
 import styled from 'styled-components';
 
-
 interface ButtonProps {
-    /** 버튼 텍스트 */
-    label: string;
-    /** 버튼 사이즈 */
-    size: 'small' | 'large';
-    /** 버튼 상태 */
-    disabled: boolean;
-      /** 버튼 클릭시 동작 */
-    onClick?: () => void;
+  /** 버튼 텍스트 */
+  text: string;
+  /** 버튼 상태 */
+  disabled: boolean;
+  /** DGDR 서비스 */
+  color: 'green' | 'red' | 'white';
+  /** 버튼 클릭시 동작 */
+  onClick?: () => void;
+}
+
+function classifyType(colorType: 'green' | 'red' | 'white') {
+  let answer = '';
+  switch (colorType) {
+    case 'red':
+      answer = `background-color : #FE6A6A; color : #ffffff;`;
+      break;
+    case 'green':
+      answer = `background-color : #00D4AA; color : #ffffff;`;
+      break;
+    case 'white':
+      answer = `background-color : #ffffff; color : #ABABAB;`;
+      break;
+  }
+  return answer;
 }
 
 /**
@@ -20,40 +35,34 @@ interface ButtonProps {
  * - `onClick` 속성은 버튼을 클릭했을때 실행시킬 콜백함수를 넘길수 있습니다.
  */
 
-export default function Button({ label = 'button', size = 'large', disabled= false, ...props }: ButtonProps) {
-  
-  const onClick = () => {
-    alert("버튼 클릭!");
-  }
-
+export default function Button({
+  text = '버튼',
+  disabled = false,
+  color = 'green',
+  onClick,
+  ...props
+}: ButtonProps) {
   return (
-    <Styled.Button size={size} active={disabled} onClick={onClick}>
-     <div className="button" role="button" {...props}>
-                {label}
-      </div>
-    </Styled.Button>
-  )
+    <DDLButton active={disabled} onClick={onClick} color={classifyType(color)}>
+      {text}
+    </DDLButton>
+  );
 }
 
-
-const Styled = {
-  Button: styled.button<{size : 'small' | 'large', active : boolean}>`
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border : none;
-    border-radius : 14px;
-    width: ${({ size }) => (size === 'large' ? '328px' : '156px')};
-    background-color: ${({active}) => (active === true ? '#00D4AA' : '#F0F0F0')};
-    .button{
-            width : 100%;
-            padding-top: 16px;
-            padding-bottom: 16px;
-            cursor: pointer;
-            color : ${({active}) => (active === true ? '#ffffff' : '#ABABAB')};
-            text-align: center;
-            font-size: 17px;
-            font-weight : 500;
-        }
-  `
-}
+const DDLButton = styled.button<{ active: boolean; color: string }>`
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.75px;
+  cursor: pointer;
+  ${(props) => props.color};
+  background-color: ${(props) => (props.active ? '#F0F0F0' : props.color)};
+  color: ${(props) => (props.active ? '#ABABAB' : props.color)};
+`;
