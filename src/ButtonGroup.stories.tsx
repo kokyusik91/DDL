@@ -11,7 +11,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{}}>
         <Story />
       </div>
     ),

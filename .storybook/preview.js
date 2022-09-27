@@ -19,7 +19,7 @@ export const parameters = {
     },
   },
   viewport: {
-    viewports: { ...INITIAL_VIEWPORTS, ...customViewports }, // newViewports would be an ViewportMap. (see below for examples)
+    viewports: { ...customViewports, ...INITIAL_VIEWPORTS }, // newViewports would be an ViewportMap. (see below for examples)
     defaultViewport: 'someDefault',
   },
 };

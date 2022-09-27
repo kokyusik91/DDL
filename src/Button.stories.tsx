@@ -10,14 +10,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div
-        style={{
-          maxWidth: '560px',
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+      <div style={{}}>
         <Story />
       </div>
     ),
