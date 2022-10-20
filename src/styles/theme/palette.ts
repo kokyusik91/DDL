@@ -5,7 +5,7 @@ const palette = {
   },
   grey: {
     50: '#FAFAFA',
-    100: '#F5F5F5',
+    100: '#FFFFFF',
     200: '#F8F8F8',
     300: '#F0F0F0',
     400: '#DFDFDF',
@@ -14,6 +14,22 @@ const palette = {
     700: '#797979',
     800: '#2F3E39',
   },
+  dgdrDeepGreen: '#18806A',
+  main: {
+    green: '#00D4AA',
+    orangeRed: '#FE6A6A',
+    blue: '#467FF7',
+    purple: '#BB39FA',
+    yellow: '#FCB707',
+  },
+  sub: {
+    green: '#E6FBF7',
+    orangeRed: '#FFF0F0',
+    blue: '#EDF2FE',
+    purple: '#F2E5F8',
+    yellow: '#FFF5D6',
+  },
+  // 기존 분류
   // green
   primary: {
     main: '#00D4AA', // green
