@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import typography from '../styles/theme/typography';
+import typography from './styles/theme/typography';
 
 interface TypoProps {
   /** 텍스트 */
@@ -41,17 +41,17 @@ interface TypoProps {
  * - body1 : `font-weight: 400` `font-size: 17px` `line-height: 22px` `letter-spacing: -0.75px`
  * - body2 : `font-weight: 400` `font-size: 16px` `line-height: 20px` `letter-spacing: -0.5px`
  * - body3 : `font-weight: 400` `font-size: 14px` `line-height: 18px` `letter-spacing: 0px`
- * - sub1 : `font-weight: 400` `font-size: 12px` `line-height: 18px` `letter-spacing: 0px`
+ * - sub1 : `font-weight: 400` `font-size: 12px` `line-height: 16px` `letter-spacing: 0px`
  * - sub2 : `font-weight: 400` `font-size: 9px` `line-height: 12px` `letter-spacing: 0px`
 
 
  * **Typo-M 스펙**
  * - body1_M : `font-weight: 500` `font-size: 17px` `line-height: 22px` `letter-spacing: -0.75px`
  * - body3_M : `font-weight: 500` `font-size: 14px` `line-height: 18px` `letter-spacing: 0px`
- * - sub1_M : `font-weight: 500` `font-size: 12px` `line-height: 18px` `letter-spacing: 0px`
+ * - sub1_M : `font-weight: 500` `font-size: 12px` `line-height: 16px` `letter-spacing: 0px`
 
 
- * **Typo-Basic 스펙**
+ * **Typo-Line 스펙**
  * - h1_line : `font-weight: 700` `font-size: 24px` `line-height: 34px` `letter-spacing: -0.75px`
  * - h2_line : `font-weight: 500` `font-size: 21px` `line-height: 30px` `letter-spacing: -0.75px`
  * - h3_line : `font-weight: 500` `font-size: 19px` `line-height: 28px` `letter-spacing: -0.75px`
