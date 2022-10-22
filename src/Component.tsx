@@ -1,8 +1,3 @@
-import Button from './Button';
-import ButtonGroup from './ButtonGroups';
-import Color from './Color';
-import theme from './styles/theme';
-
 function Component() {
   return (
     <>

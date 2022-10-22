@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from './styles/theme';
 
 interface ButtonProps {
   /** 버튼 텍스트 */
@@ -58,9 +59,7 @@ const DDLButton = styled.button<{ active: boolean; color: string }>`
   border: none;
   border-radius: 14px;
   font-size: 17px;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: -0.75px;
+
   cursor: pointer;
   ${(props) => props.color};
   background-color: ${(props) => (props.active ? '#F0F0F0' : props.color)};
