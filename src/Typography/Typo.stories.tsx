@@ -1,7 +1,7 @@
 import Typo from './Typo';
 
 export default {
-  title: 'stories/Typography',
+  title: 'resources/Typography',
   component: Typo,
 };
 

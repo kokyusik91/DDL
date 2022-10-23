@@ -1,9 +1,9 @@
 import Color from './Color';
-import theme from './styles/theme';
+import theme from '../styles/theme';
 import styled from 'styled-components';
 
 export default {
-  title: 'stories/Color',
+  title: 'resources/Color',
   component: Color,
 };
 

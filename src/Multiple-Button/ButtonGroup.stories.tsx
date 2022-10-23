@@ -1,7 +1,7 @@
 import { ComponentStory, Meta } from '@storybook/react';
 
 import ButtonGroup from './ButtonGroups';
-import Button from './Button';
+import Button from './Sinlge-button/Button';
 
 export default {
   title: 'stories/Button-Group',

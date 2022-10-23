@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import typography from './styles/theme/typography';
+import typography from '../styles/theme/typography';
 
 interface TypoProps {
   /** 텍스트 */
