@@ -12,20 +12,13 @@ export const typoBasic = () => {
       <Typo type={'h2'}>동거동락 임대인 서비스!</Typo>
       <Typo type={'h3'}>동거동락 임대인 서비스!</Typo>
       <Typo type={'body1'}>동거동락 임대인 서비스!</Typo>
+      <Typo type={'body1_M'}>동거동락 임대인 서비스!</Typo>
       <Typo type={'body2'}>동거동락 임대인 서비스!</Typo>
       <Typo type={'body3'}>동거동락 임대인 서비스!</Typo>
-      <Typo type={'sub1'}>동거동락 임대인 서비스!</Typo>
-      <Typo type={'sub2'}>동거동락 임대인 서비스!</Typo>
-    </div>
-  );
-};
-
-export const typoM = () => {
-  return (
-    <div>
-      <Typo type={'body1_M'}>동거동락 임대인 서비스!</Typo>
       <Typo type={'body3_M'}>동거동락 임대인 서비스!</Typo>
+      <Typo type={'sub1'}>동거동락 임대인 서비스!</Typo>
       <Typo type={'sub1_M'}>동거동락 임대인 서비스!</Typo>
+      <Typo type={'sub2'}>동거동락 임대인 서비스!</Typo>
     </div>
   );
 };
@@ -83,10 +76,6 @@ export const typoLine = () => {
 
 typoBasic.story = {
   name: 'Typo-Basic',
-};
-
-typoM.story = {
-  name: 'Typo-M',
 };
 
 typoLine.story = {

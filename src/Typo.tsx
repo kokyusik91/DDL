@@ -39,16 +39,14 @@ interface TypoProps {
  * - h2 : `font-weight: 500` `font-size: 21px` `line-height: 26px` `letter-spacing: -0.75px`
  * - h3 : `font-weight: 500` `font-size: 19px` `line-height: 24px` `letter-spacing: -0.75px`
  * - body1 : `font-weight: 400` `font-size: 17px` `line-height: 22px` `letter-spacing: -0.75px`
+ * - body1_M : `font-weight: 500` `font-size: 17px` `line-height: 22px` `letter-spacing: -0.75px`
  * - body2 : `font-weight: 400` `font-size: 16px` `line-height: 20px` `letter-spacing: -0.5px`
  * - body3 : `font-weight: 400` `font-size: 14px` `line-height: 18px` `letter-spacing: 0px`
+ * - body3_M : `font-weight: 500` `font-size: 14px` `line-height: 18px` `letter-spacing: 0px`
  * - sub1 : `font-weight: 400` `font-size: 12px` `line-height: 16px` `letter-spacing: 0px`
+ * - sub1_M : `font-weight: 500` `font-size: 12px` `line-height: 16px` `letter-spacing: 0px`
  * - sub2 : `font-weight: 400` `font-size: 9px` `line-height: 12px` `letter-spacing: 0px`
 
-
- * **Typo-M 스펙**
- * - body1_M : `font-weight: 500` `font-size: 17px` `line-height: 22px` `letter-spacing: -0.75px`
- * - body3_M : `font-weight: 500` `font-size: 14px` `line-height: 18px` `letter-spacing: 0px`
- * - sub1_M : `font-weight: 500` `font-size: 12px` `line-height: 16px` `letter-spacing: 0px`
 
 
  * **Typo-Line 스펙**
@@ -77,6 +75,7 @@ export default function Typo({ children, type }: TypoProps) {
 
 const TypoContainer = styled.h1<{ font: string }>`
   ${(props) => props.font}
+  margin-bottom: 16px;
   h2 {
     ${(props) => props.font}
   }

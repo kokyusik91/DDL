@@ -42,7 +42,7 @@ const typography = {
     letter-spacing: -0.75px;
   `,
   body1_M: `
-    font-weight: 400;
+    font-weight: 500;
     font-size: 17px;
     line-height: 22px;
     letter-spacing: -0.75px;
@@ -79,7 +79,7 @@ const typography = {
     line-height: 18px;
   `,
   body3_M: `
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     line-height: 18px;
   `,
@@ -89,7 +89,7 @@ const typography = {
     line-height: 21px;
   `,
   body3_M_line: `
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     line-height: 21px;
   `,
@@ -99,7 +99,7 @@ const typography = {
     line-height: 16px;
   `,
   sub1_M: `
-    font-weight: 400;
+    font-weight: 500;
     font-size: 12px;
     line-height: 16px;
   `,
@@ -109,7 +109,7 @@ const typography = {
     line-height: 18px;
   `,
   sub1_M_line: `
-    font-weight: 400;
+    font-weight: 500;
     font-size: 12px;
     line-height: 16px;
   `,

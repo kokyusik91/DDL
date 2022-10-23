@@ -16,6 +16,7 @@ export const color = () => {
           colorName="dgdr_deep_green"
         />
       </Container>
+      {/* main color */}
       <Container>
         <Color colorValue={theme.palette.main.green} colorName="dgdr_green" />
         <Color
@@ -26,6 +27,7 @@ export const color = () => {
         <Color colorValue={theme.palette.main.purple} colorName="dgdr_purple" />
         <Color colorValue={theme.palette.main.yellow} colorName="dgdr_yellow" />
       </Container>
+      {/* sub Color */}
       <Container>
         <Color
           colorValue={theme.palette.sub.green}
@@ -45,6 +47,7 @@ export const color = () => {
           colorName="dgdr_sub_yellow"
         />
       </Container>
+      {/* 무채색 계열 */}
       <Container>
         <Color colorValue={theme.palette.grey[100]} colorName="dgdr_100" />
         <Color colorValue={theme.palette.grey[200]} colorName="dgdr_200" />

@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import theme from './styles/theme';
-import palette from './styles/theme/palette';
 
 interface ColorProps {
   colorValue: string;
@@ -45,23 +43,21 @@ export default function Color({ colorValue, colorName }: ColorProps) {
 }
 
 const ColorContainer = styled.article`
-  width: 144px;
+  min-width: 170px;
   border-radius: 6px;
   padding: 8px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
   margin-right: 20px;
 
   h1 {
-    margin: 0;
-    ${theme.typography.h3}
-    color: ${palette.grey[800]};
-    margin-bottom: 8px;
+    color: ${({theme}) => theme.palette.grey[800]};
+    margin-bottom: 16px;
   }
 
   h2 {
     margin: 0;
-    ${theme.typography.sub1}
-    color: ${palette.grey[600]};
+    ${({theme}) => theme.typography.sub1};
+    color: ${({theme}) => theme.palette.grey[600]};
   }
 `;
 
