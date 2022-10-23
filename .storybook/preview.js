@@ -4,6 +4,9 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../src/styles/global-styles';
 import theme from '../src/styles/theme';
 
+import { addDecorator } from '@storybook/react';
+import { withThemes } from '@react-theming/storybook-addon';
+
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
@@ -12,7 +15,9 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+// addDecorator(withThemes(ThemeProvider, [theme]));
 
+// 다양한 뷰포트 제공
 const customViewports = {
   dgdr: {
     name: 'DGDR Main viewport',
