@@ -1,10 +1,10 @@
 import { ComponentStory, Meta } from '@storybook/react';
 
 import ButtonGroup from './ButtonGroups';
-import Button from './Sinlge-button/Button';
+import Button from '../Sinlge-button/Button';
 
 export default {
-  title: 'stories/Button-Group',
+  title: 'button/Multiple_Button',
   component: ButtonGroup,
   parameters: {
     componentSubtitle: 'DGDR 서비스에서 사용하는 버튼그룹을 정의합니다.',

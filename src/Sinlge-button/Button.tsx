@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from './styles/theme';
+import theme from '../styles/theme';
 
 interface ButtonProps {
   /** 버튼 텍스트 */
@@ -58,7 +58,7 @@ const DDLButton = styled.button<{ active: boolean; color: string }>`
   align-items: center;
   border: none;
   border-radius: 14px;
-  font-size: 17px;
+  ${({theme})=> theme.typography.h3}
 
   cursor: pointer;
   ${(props) => props.color};

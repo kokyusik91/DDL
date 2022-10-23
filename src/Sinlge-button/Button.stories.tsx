@@ -3,7 +3,7 @@ import { ComponentStory, Meta } from '@storybook/react';
 import Button from './Button';
 
 export default {
-  title: 'stories/Button',
+  title: 'button/Single_Button',
   component: Button,
   parameters: {
     componentSubtitle: 'DGDR 서비스에서 사용하는 버튼을 정의합니다.',
