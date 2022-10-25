@@ -3,13 +3,13 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../src/styles/global-styles';
 import theme from '../src/styles/theme';
-
-import { addDecorator } from '@storybook/react';
-import { withThemes } from '@react-theming/storybook-addon';
+import { themes } from '@storybook/theming';
+import { useDarkMode } from 'storybook-dark-mode';
+import darkTheme from '../src/styles/darkTheme';
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={useDarkMode() ? darkTheme : theme}>
       <GlobalStyle />
       <Story />
     </ThemeProvider>
@@ -39,5 +39,11 @@ export const parameters = {
   viewport: {
     viewports: { ...customViewports, ...INITIAL_VIEWPORTS }, // newViewports would be an ViewportMap. (see below for examples)
     defaultViewport: 'someDefault',
+  },
+  darkMode: {
+    // Override the default dark theme
+    dark: { ...themes.dark, appBg: 'black' },
+    // Override the default light theme
+    light: { ...themes.normal, appBg: 'white' },
   },
 };
