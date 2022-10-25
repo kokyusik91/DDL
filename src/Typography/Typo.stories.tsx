@@ -1,8 +1,12 @@
 import Typo from './Typo';
 
+// CSF 방식 : 어떤 컴포넌트의 문서인지, 그리고 어떤 설정을 적용할 것인지 정의한다.
 export default {
-  title: 'resources/Typography',
-  component: Typo,
+  title: 'resources/Typography', // 스토리북에서 보여질 그룹과 경로를 명시
+  component: Typo, // 어떤 컴포넌트를 문서화 할지 명시
+  parameters: {
+    componentSubtitle: 'DGDR 서비스에서 사용하는 타이포 그래프를 정의합니다.',
+  },
 };
 
 export const typoBasic = () => {
@@ -74,10 +78,54 @@ export const typoLine = () => {
   );
 };
 
+export const typoNumber = () => {
+  return (
+    <div>
+      <Typo type={'h1'} isNumber>
+        1,000,000
+      </Typo>
+      <Typo type={'h2'} isNumber>
+        2,000,000
+      </Typo>
+      <Typo type={'h3'} isNumber>
+        3,000,000
+      </Typo>
+      <Typo type={'body1'} isNumber>
+        4,000,000
+      </Typo>
+      <Typo type={'body1_M'} isNumber>
+        5,000,000
+      </Typo>
+      <Typo type={'body2'} isNumber>
+        6,000,000
+      </Typo>
+      <Typo type={'body3'} isNumber>
+        7,000,000
+      </Typo>
+      <Typo type={'body3_M'} isNumber>
+        8,000,000
+      </Typo>
+      <Typo type={'sub1'} isNumber>
+        9,000,000
+      </Typo>
+      <Typo type={'sub1_M'} isNumber>
+        10,000,000
+      </Typo>
+      <Typo type={'sub2'} isNumber>
+        11,000,000
+      </Typo>
+    </div>
+  );
+};
+
 typoBasic.story = {
-  name: 'Typo-Basic',
+  name: 'Basic',
+};
+
+typoNumber.story = {
+  name: 'Number',
 };
 
 typoLine.story = {
-  name: 'Typo-Line',
+  name: 'Line',
 };
