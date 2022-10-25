@@ -7,7 +7,6 @@ interface ColorProps {
 
 /**
  *
- * DDL의 color chip 입니다.
  *
  * - dgdr_deep_green : `#18806A`
  * - dgdr_green : `#00D4AA`
@@ -50,14 +49,14 @@ const ColorContainer = styled.article`
   margin-right: 20px;
 
   h1 {
-    color: ${({theme}) => theme.palette.grey[800]};
+    color: ${({ theme }) => theme.palette.grey[800]};
     margin-bottom: 16px;
   }
 
   h2 {
     margin: 0;
-    ${({theme}) => theme.typography.sub1};
-    color: ${({theme}) => theme.palette.grey[600]};
+    ${({ theme }) => theme.typography.sub1};
+    color: ${({ theme }) => theme.palette.grey[600]};
   }
 `;
 

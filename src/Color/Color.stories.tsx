@@ -5,6 +5,9 @@ import styled from 'styled-components';
 export default {
   title: 'resources/Color',
   component: Color,
+  parameters: {
+    componentSubtitle: 'DGDR 서비스의 기본 색상 입니다.',
+  },
 };
 
 export const color = () => {
