@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 import typography from '../styles/theme/typography';
+import { useDarkMode } from 'storybook-dark-mode';
 
 interface TypoProps {
   /** 텍스트 */
@@ -88,6 +89,7 @@ export default function Typo({ children, type, isNumber }: TypoProps) {
 
 const TypoContainer = styled.h1<{ font: string; isNumber?: boolean }>`
   ${(props) => props.font}
+  color : ${({ theme }) => (useDarkMode() ? 'white' : theme.palette.grey[800])};
   margin-bottom: 16px;
   h2 {
     ${(props) => props.font}
