@@ -1,6 +1,7 @@
 import Color from './Color';
 import theme from '../styles/theme';
 import styled from 'styled-components';
+import { Meta } from '@storybook/react';
 
 export default {
   title: 'resources/Color',
@@ -8,7 +9,13 @@ export default {
   parameters: {
     componentSubtitle: 'DGDR 서비스의 기본 색상 입니다.',
   },
-};
+  argTypes: {
+    variant: {
+      options: ['primary', 'secondary'],
+      control: { type: 'radio' },
+    },
+  },
+} as Meta<typeof Color>;
 
 export const color = () => {
   return (
