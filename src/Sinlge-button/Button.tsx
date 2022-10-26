@@ -5,10 +5,12 @@ interface ButtonProps {
   text: string;
   /** 버튼 상태 */
   disabled: boolean;
-  /** DGDR 서비스 */
+  /** 버튼 색상 */
   color: 'green' | 'red' | 'white';
   /** 버튼 클릭시 동작 */
   onClick?: () => void;
+  /** 버튼 width 설정 fullWidth true면 width : 100% */
+  fullWidth?: boolean;
 }
 
 function classifyType(colorType: 'green' | 'red' | 'white') {
@@ -28,7 +30,6 @@ function classifyType(colorType: 'green' | 'red' | 'white') {
 }
 
 /**
- * DDL의 기본 버튼 컴포넌트 입니다
  *
  * - `size` 값을 `large`로 설정하면 버튼이 **크게** 나타납니다. 기본값은 `small` 입니다.
  * - `isActive` 값을 `active`로 설정하면 버튼이 **활성화** 됩니다. 기본값은 `active` 입니다.
@@ -40,24 +41,35 @@ export default function Button({
   disabled = false,
   color = 'green',
   onClick,
+  fullWidth = true,
   ...props
 }: ButtonProps) {
   return (
-    <DDLButton active={disabled} onClick={onClick} color={classifyType(color)}>
+    <DDLButton
+      active={disabled}
+      onClick={onClick}
+      color={classifyType(color)}
+      fullWidth={fullWidth}
+      disabled
+    >
       {text}
     </DDLButton>
   );
 }
 
-const DDLButton = styled.button<{ active: boolean; color: string }>`
-  width: 100%;
+const DDLButton = styled.button<{
+  active: boolean;
+  color: string;
+  fullWidth?: boolean;
+}>`
+  width: ${(props) => (props.fullWidth ? '100%' : '328px')};
   height: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   border-radius: 14px;
-  ${({ theme }) => theme.typography.h3}
+  ${({ theme }) => theme.typography.h3};
 
   cursor: pointer;
   ${(props) => props.color};

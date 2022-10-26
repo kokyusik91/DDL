@@ -22,7 +22,6 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 // basic 버튼 🥰
 export const Basic = Template.bind({});
 Basic.args = {
-  text: 'button',
   color: 'green',
   disabled: false,
   onClick: () => {
@@ -32,28 +31,23 @@ Basic.args = {
 
 export const Green = Template.bind({});
 Green.args = {
-  text: 'button',
   color: 'green',
   disabled: false,
 };
 
 export const Red = Template.bind({});
 Red.args = {
-  text: 'button',
   color: 'red',
   disabled: false,
 };
 
 export const White = Template.bind({});
 White.args = {
-  text: 'button',
   color: 'white',
   disabled: false,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  text: 'button',
-  color: 'white',
   disabled: true,
 };
