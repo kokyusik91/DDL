@@ -6,16 +6,16 @@ export default {
   title: 'Icon/Icon',
 };
 
-export const icon = () => <Icon icon="air_pod" />;
+export const icon = () => <Icon icon="close_small" />;
 icon.story = {
   name: 'Default',
 };
 
 console.log('iconTypes', iconTypes);
 
-export const customSize = () => <Icon icon="air_pod" size="4rem" />;
+export const customSize = () => <Icon icon="close_small" size="4rem" />;
 
-export const customColor = () => <Icon icon="air_pod" color="red" />;
+export const customColor = () => <Icon icon="close_small" color="red" />;
 
 export const listOfIcons = () => {
   return (
