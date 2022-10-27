@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import Icon, { iconTypes } from './Icon';
 
+const nonColoredIcon = iconTypes.filter((icon) => !icon.includes('color'));
+const coloredIcon = iconTypes.filter((icon) => icon.startsWith('color'));
+
 export default {
   component: Icon,
   title: 'Icon/Icon',
@@ -11,16 +14,27 @@ icon.story = {
   name: 'Default',
 };
 
-console.log('iconTypes', iconTypes);
-
 export const customSize = () => <Icon icon="close_small" size="4rem" />;
 
 export const customColor = () => <Icon icon="close_small" color="red" />;
 
-export const listOfIcons = () => {
+export const nonColored_Icon = () => {
   return (
     <IconListStyle>
-      {iconTypes.map((icon) => (
+      {nonColoredIcon.map((icon) => (
+        <li key={icon}>
+          <Icon icon={icon} />
+          <p>{icon}</p>
+        </li>
+      ))}
+    </IconListStyle>
+  );
+};
+
+export const colored_Icon = () => {
+  return (
+    <IconListStyle>
+      {coloredIcon.map((icon) => (
         <li key={icon}>
           <Icon icon={icon} />
           <p>{icon}</p>
