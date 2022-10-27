@@ -30,6 +30,23 @@ const customViewports = {
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  backgrounds: {
+    default: 'light',
+    values: [
+      {
+        name: 'light',
+        value: '#F8F8F8',
+      },
+      {
+        name: 'dark',
+        value: '#797979',
+      },
+      {
+        name: 'twitter',
+        value: '#00aced',
+      },
+    ],
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
