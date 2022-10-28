@@ -11,6 +11,8 @@ interface ButtonGroupProps {
   children: React.ReactNode;
   /* 스타일 커스터마이징 하고싶을 때 사용 */
   className?: string;
+  /* 버튼 그룹을 fullWidth로 설정하면 꽉차게 설정 됩니다 */
+  fullWidth?: boolean;
 }
 
 /**
@@ -22,19 +24,25 @@ interface ButtonGroupProps {
 export default function ButtonGroup({
   direction = 'row',
   gap = '16px',
+  fullWidth = false,
   children,
 }: ButtonGroupProps) {
   return (
-    <DDLButtonGroup direction={direction} gap={gap}>
+    <DDLButtonGroup direction={direction} gap={gap} fullWidth={fullWidth}>
       {children}
     </DDLButtonGroup>
   );
 }
 
-const DDLButtonGroup = styled.div<{ direction: string; gap: string }>`
-  width: 100%;
+const DDLButtonGroup = styled.div<{
+  direction: string;
+  gap: string;
+  fullWidth?: boolean;
+}>`
+  width: ${(props) => (props.fullWidth ? '100%' : '328px')};
   display: flex;
   flex-direction: ${(props) => props.direction};
+  justify-content: center;
 
   button:first-child {
     margin-right: ${(props) => props.gap};
