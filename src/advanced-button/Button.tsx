@@ -4,7 +4,7 @@ import theme from '../styles/theme';
 import { default as Typo, TextType } from '../Typography/Typo';
 import { default as Icon, IconType } from '../dgdr-Icon/Icon';
 
-type mainColor = 'Green' | 'Red' | 'White';
+export type mainColor = 'Green' | 'Red' | 'White';
 
 interface ButtonProps {
   /** 버튼에 들어갈 내용 */
@@ -21,7 +21,7 @@ interface ButtonProps {
   textType?: TextType;
 }
 
-function assignButtonColor(colorType: mainColor): string {
+export function assignButtonColor(colorType: mainColor): string {
   const colorChip = {
     Green: theme.palette.main.green,
     Red: theme.palette.main.orangeRed,
