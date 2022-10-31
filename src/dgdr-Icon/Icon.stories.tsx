@@ -8,6 +8,7 @@ export default {
   component: Icon,
   title: 'Icon/Icon',
 };
+// hello
 
 export const icon = () => <Icon icon="close_small" />;
 icon.story = {
