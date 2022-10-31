@@ -60,6 +60,5 @@ const IconListStyle = styled.ul`
     svg {
       margin-right: 1rem;
     }
-    /* sd */
   }
 `;
