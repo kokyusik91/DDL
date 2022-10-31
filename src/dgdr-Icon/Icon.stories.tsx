@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Icon, { iconTypes } from './Icon';
 
 const nonColoredIcon = iconTypes.filter((icon) => !icon.includes('color'));
-const coloredIcon = iconTypes.filter((icon) => icon.startsWith('color'));
+const coloredIcon = iconTypes.filter((icon) => icon.includes('color'));
 
 export default {
   component: Icon,

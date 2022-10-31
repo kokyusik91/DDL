@@ -3,33 +3,35 @@ import styled from 'styled-components';
 import typography from '../styles/theme/typography';
 import { useDarkMode } from 'storybook-dark-mode';
 
+export type TextType =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'body1'
+  | 'body1_M'
+  | 'body2'
+  | 'body3'
+  | 'body3_M'
+  | 'sub1'
+  | 'sub1_M'
+  | 'sub2'
+  | 'h1_line'
+  | 'h2_line'
+  | 'h3_line'
+  | 'body1_line'
+  | 'body1_M_line'
+  | 'body2_line'
+  | 'body3_line'
+  | 'body3_M_line'
+  | 'sub1_line'
+  | 'sub1_M_line'
+  | 'sub2_line';
+
 interface TypoProps {
   /** 텍스트 */
   children: string | ReactNode;
   /** 텍스트 타입 */
-  type:
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'body1'
-    | 'body1_M'
-    | 'body2'
-    | 'body3'
-    | 'body3_M'
-    | 'sub1'
-    | 'sub1_M'
-    | 'sub2'
-    | 'h1_line'
-    | 'h2_line'
-    | 'h3_line'
-    | 'body1_line'
-    | 'body1_M_line'
-    | 'body2_line'
-    | 'body3_line'
-    | 'body3_M_line'
-    | 'sub1_line'
-    | 'sub1_M_line'
-    | 'sub2_line';
+  type: TextType;
   isNumber?: boolean;
 }
 
