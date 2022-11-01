@@ -1,4 +1,5 @@
 import { ComponentStory, Meta } from '@storybook/react';
+import styled from 'styled-components';
 
 import Button from './Button';
 
@@ -56,3 +57,58 @@ Disabled.args = {
 //     Button
 //   </Button>
 // );
+
+// 디자이너에게 보여주는 템플릿
+const DesignTemplate: ComponentStory<typeof Button> = () => {
+  return (
+    <DesginTemplateContainer>
+      <li>
+        <Button
+          buttonColor="Green"
+          fullWidth={false}
+          onClick={() => alert('버튼 클릭!')}
+        >
+          확인
+        </Button>
+      </li>
+      <li>
+        <Button
+          buttonColor="Red"
+          fullWidth={false}
+          onClick={() => alert('버튼 클릭!')}
+        >
+          확인
+        </Button>
+      </li>
+      <li>
+        <Button
+          buttonColor="White"
+          fullWidth={false}
+          onClick={() => alert('버튼 클릭!')}
+        >
+          확인
+        </Button>
+      </li>
+      <li>
+        <Button
+          buttonColor="Green"
+          fullWidth={false}
+          onClick={() => alert('버튼 클릭!')}
+          disabled
+        >
+          확인
+        </Button>
+      </li>
+    </DesginTemplateContainer>
+  );
+};
+
+export const DesignQATemplate = DesignTemplate.bind({});
+
+const DesginTemplateContainer = styled.ul`
+  display: inline-flex;
+  flex-direction: column;
+  li {
+    margin-bottom: 20px;
+  }
+`;

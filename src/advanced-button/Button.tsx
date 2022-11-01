@@ -7,18 +7,20 @@ import { default as Icon, IconType } from '../dgdr-Icon/Icon';
 export type mainColor = 'Green' | 'Red' | 'White';
 
 interface ButtonProps {
-  /** 버튼에 들어갈 내용 */
+  /** Single-button에 들어갈 텍스트 입니다. */
   children: string;
-  /** 버튼 색상 */
+  /** Single-button의 색상 입니다. */
   buttonColor: mainColor;
-  /** 버튼 너비 */
+  /** Single-button의 너비를 나타냅니다. */
   fullWidth: boolean;
-  /** 클릭 함수 */
+  /** Single-button의 클릭 했을때의 함수입니다. */
   onClick: () => void;
-  /** 버튼 비활성화 */
+  /** Single-button의 비활성화를 나타냅니다. */
   disabled?: boolean;
-  /** 텍스트 사이즈 */
+  /** Single-button에 들어갈 텍스트 사이즈 입니다. */
   textType?: TextType;
+  /** 커스텀 스타일 */
+  customStyle?: any;
 }
 
 export function assignButtonColor(colorType: mainColor): string {
@@ -31,7 +33,7 @@ export function assignButtonColor(colorType: mainColor): string {
   return colorChip[colorType];
 }
 
-function assginText(textType: TextType) {
+export function assginText(textType: TextType) {
   return theme.typography[textType];
 }
 
@@ -48,6 +50,7 @@ export default function Button({
   onClick,
   disabled = false,
   textType = 'body1_M',
+  customStyle,
 }: ButtonProps) {
   return (
     <DDLButton
@@ -56,6 +59,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       textType={textType}
+      style={customStyle}
     >
       {children}
     </DDLButton>
