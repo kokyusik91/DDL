@@ -4,11 +4,11 @@ import { default as Icon, IconType } from '../dgdr-Icon/Icon';
 import theme from '../styles/theme';
 
 interface FabButtonProps {
-  /** FAB button 색상 */
+  /** FAB-button의 색상 입니다. */
   buttonColor: 'Green' | 'Red';
-  /** 아이콘 이름 */
+  /** FAB-button에 들어갈 아이콘 타입입니다. */
   iconType: IconType;
-  /** 아이콘 색상 */
+  /** FAB-button에 들어갈 아이콘 색상입니다. */
   iconColor: string;
 }
 //
