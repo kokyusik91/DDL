@@ -1,6 +1,7 @@
 import { ComponentStory, Meta } from '@storybook/react';
 import ButtonGroup from './ButtonGroup';
 import Button from '../advanced-button/Button';
+import styled from 'styled-components';
 
 export default {
   title: 'button/Multiple-button',
@@ -99,3 +100,89 @@ Disabled.args = {
     </>
   ),
 };
+
+// 디자이너에게 보여주는 템플릿
+const DesignTemplate: ComponentStory<typeof ButtonGroup> = () => {
+  return (
+    <DesginTemplateContainer>
+      <li>
+        <ButtonGroup gap={16} fullWidth={false}>
+          <Button
+            buttonColor="White"
+            fullWidth
+            onClick={() => {
+              alert('취소 버튼 클릭!');
+            }}
+          >
+            취소
+          </Button>
+          <Button
+            buttonColor="Green"
+            fullWidth
+            onClick={() => {
+              alert('확인 버튼 클릭!');
+            }}
+          >
+            확인
+          </Button>
+        </ButtonGroup>
+      </li>
+      <li>
+        <ButtonGroup gap={16} fullWidth={false}>
+          <Button
+            buttonColor="White"
+            fullWidth
+            onClick={() => {
+              alert('취소 버튼 클릭!');
+            }}
+          >
+            취소
+          </Button>
+          <Button
+            buttonColor="Red"
+            fullWidth
+            onClick={() => {
+              alert('확인 버튼 클릭!');
+            }}
+          >
+            확인
+          </Button>
+        </ButtonGroup>
+      </li>
+      <li>
+        <ButtonGroup gap={16} fullWidth={false}>
+          <Button
+            buttonColor="White"
+            fullWidth
+            onClick={() => {
+              alert('취소 버튼 클릭!');
+            }}
+          >
+            취소
+          </Button>
+          <Button
+            buttonColor="Green"
+            fullWidth
+            onClick={() => {
+              alert('확인 버튼 클릭!');
+            }}
+            disabled
+          >
+            확인
+          </Button>
+        </ButtonGroup>
+      </li>
+    </DesginTemplateContainer>
+  );
+};
+
+export const DesignQATemplate = DesignTemplate.bind({});
+DesignQATemplate.args = {};
+
+const DesginTemplateContainer = styled.ul`
+  display: inline-flex;
+  flex-direction: column;
+  li {
+    margin-bottom: 20px;
+  }
+`;

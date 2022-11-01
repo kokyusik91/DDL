@@ -2,11 +2,11 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 interface ButtonGroupProps {
-  /** 버튼 개별 요소 입니다 */
+  /** Single-button 컴포넌트가 들어옵니다. */
   children: ReactNode;
   /** 버튼 사이 간격 입니다. */
   gap: number;
-  /** 버튼 너비 입니다. */
+  /** Multiple-button의 너비를 나타냅니다. */
   fullWidth: boolean;
 }
 
