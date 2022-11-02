@@ -23,7 +23,7 @@ export interface SnackBarProps {
   /** SnackBar 애니메이션 시간입니다. */
   durationTime?: number;
   /** SnackBar의 너비를 나타냅니다. */
-  fullWidth: boolean;
+  fullWidth?: boolean;
   /** SnackBar 아이콘 타입을 나타냅니다. */
   iconType?: IconType;
   /** SnackBar를 닫는 함수 입니다. */

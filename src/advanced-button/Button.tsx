@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
+import { CSSProperties } from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import { default as Typo, TextType } from '../Typography/Typo';
-import { default as Icon, IconType } from '../dgdr-Icon/Icon';
 
 export type mainColor = 'Green' | 'Red' | 'White';
 
@@ -12,7 +11,7 @@ interface ButtonProps {
   /** Single-button의 색상 입니다. */
   buttonColor: mainColor;
   /** Single-button의 너비를 나타냅니다. */
-  fullWidth: boolean;
+  fullWidth?: boolean;
   /** Single-button의 클릭 했을때의 함수입니다. */
   onClick: () => void;
   /** Single-button의 비활성화를 나타냅니다. */
@@ -20,7 +19,7 @@ interface ButtonProps {
   /** Single-button에 들어갈 텍스트 사이즈 입니다. */
   textType?: TextType;
   /** 커스텀 스타일 */
-  customStyle?: any;
+  customStyle?: CSSProperties;
 }
 
 export function assignButtonColor(colorType: mainColor): string {
@@ -36,12 +35,6 @@ export function assignButtonColor(colorType: mainColor): string {
 export function assginText(textType: TextType) {
   return theme.typography[textType];
 }
-
-/**
- *
- * 버튼을 정의한다!
- *
- */
 
 export default function Button({
   children,
