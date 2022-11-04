@@ -20,6 +20,7 @@ interface ButtonProps {
   textType?: TextType;
   /** 커스텀 스타일 */
   customStyle?: CSSProperties;
+  /** */
 }
 
 export function assignButtonColor(colorType: mainColor): string {
