@@ -18,7 +18,7 @@ export default function BottomSheetButton({
     </BomttomSheetButtonContainer>
   );
 }
-
+// 바텀 sheet 만들어야함!
 const BomttomSheetButtonContainer = styled.div<{ fullWidth: boolean }>`
   position: relative;
   display: inline-flex;
