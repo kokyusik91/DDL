@@ -63,7 +63,7 @@ const IconButtonWrapper = styled.button<{
   align-items: center;
   justify-content: center;
   width: ${(props) => (props.fullWidth ? '100%' : '328px')};
-  padding: 16px 0;
+  padding: 15px 0;
   border-radius: 14px;
   background-color: ${(props) =>
     assignIconButtonColor(props.buttonColor).backgroundColor};
