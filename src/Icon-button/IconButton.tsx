@@ -4,6 +4,10 @@ import { assginText } from '../advanced-button/Button';
 import { TextType } from '../Typography/Typo';
 import { default as Icon, IconType } from '../dgdr-Icon/Icon';
 
+/**
+ * 개선사항 : 아이콘을 뒤에다만 붙였는데, 앞에다 붙였다 뒤에다 붙였다 할 수 있도록 만들어야한다.
+ */
+
 export type IconButtonProps = {
   /** Icon-button에 들어갈 텍스트 입니다. */
   children: string;
@@ -13,7 +17,9 @@ export type IconButtonProps = {
   fullWidth: boolean;
   /** Icon-button에 들어갈 텍스트 사이즈 입니다. */
   textType?: TextType;
-  /** Icon-button에 들어갈 아이콘 타입 입니다. */
+  /** Icon-button에 들어갈 왼쪽 아이콘 타입 입니다. */
+  startIcon?: IconType;
+  /** Icon-button에 들어갈 오른쪽 아이콘 타입 입니다. */
   endIcon: IconType;
 };
 
@@ -36,7 +42,8 @@ function IconButton({
   buttonColor,
   fullWidth = false,
   textType = 'body1_M',
-  endIcon = 'plus_round_small',
+  startIcon,
+  endIcon = 'close_round_small',
 }: IconButtonProps) {
   return (
     <IconButtonWrapper
@@ -44,12 +51,21 @@ function IconButton({
       fullWidth={fullWidth}
       textType={textType}
     >
+      {startIcon && (
+        <Icon
+          icon={startIcon}
+          color={assignIconButtonColor(buttonColor).textColor}
+          customStyle={{ marginRight: '4px' }}
+        />
+      )}
       {children}
-      <Icon
-        icon={endIcon}
-        color={assignIconButtonColor(buttonColor).textColor}
-        customStyle={{ marginLeft: '4px' }}
-      />
+      {endIcon && (
+        <Icon
+          icon={endIcon}
+          color={assignIconButtonColor(buttonColor).textColor}
+          customStyle={{ marginLeft: '4px' }}
+        />
+      )}
     </IconButtonWrapper>
   );
 }
