@@ -32,6 +32,6 @@ const FabButtonContainer = styled.button<{ buttonColor: mainColor }>`
   width: 56px;
   height: 56px;
   background-color: ${(props) => assignButtonColor(props.buttonColor)};
-  border-radius: 16px;
+  border-radius: 20px;
   color: ${({ theme }) => theme.palette.grey[100]};
 `;
