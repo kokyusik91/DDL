@@ -7,7 +7,7 @@ interface ButtonGroupProps {
   /** 버튼 사이 간격 입니다. */
   gap: number;
   /** Multiple-button의 너비를 나타냅니다. */
-  fullWidth: boolean;
+  fullWidth?: boolean;
 }
 
 export default function ButtonGroup({
@@ -25,7 +25,11 @@ export default function ButtonGroup({
 const ButtonGroupContainer = styled.div<{ gap: number; fullWidth: boolean }>`
   display: flex;
   width: ${(props) => (props.fullWidth ? '100%' : '328px')};
-  button:first-child {
+  button {
     margin-right: ${(props) => `${props.gap}px`};
+  }
+
+  button:last-child {
+    margin-right: 0;
   }
 `;
