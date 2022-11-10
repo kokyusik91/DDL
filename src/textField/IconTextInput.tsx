@@ -8,18 +8,20 @@ interface TextInputProps {
   placeholder?: string;
   /** Input의 현재 상태입니다. */
   status?: 'isSucess' | 'isError';
+  /** Input에 들어갈 아이콘 컴포넌트 입니다 */
+  fullWidth?: boolean;
 }
 
 function IconTextInput({
   placeholder = 'placeholder',
   status,
+  fullWidth = false,
 }: TextInputProps) {
   const [value, setValue] = useState('');
 
   return (
-    <IconInputWrapper>
-      <CustomInput2
-        disabled
+    <IconInputWrapper fullWidth={fullWidth}>
+      <CustomInput
         value={value}
         placeholder={placeholder}
         status={status}
@@ -40,7 +42,7 @@ const assignInputBorderColor = (status: 'isSucess' | 'isError' | undefined) => {
   return colorChip[status];
 };
 
-const CustomInput2 = styled.input<{
+const CustomInput = styled.input<{
   status?: 'isSucess' | 'isError';
 }>`
   position: relative;
@@ -64,7 +66,8 @@ const CustomInput2 = styled.input<{
   }
 `;
 
-const IconInputWrapper = styled.div`
+const IconInputWrapper = styled.div<{ fullWidth: boolean }>`
+  width: ${(props) => (props.fullWidth ? '100%' : '328px')};
   position: relative;
   svg {
     position: absolute;
