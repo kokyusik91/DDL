@@ -1,9 +1,9 @@
 import { ComponentStory, Meta } from '@storybook/react';
 import TextInput from './TextInput';
-import IconTextInput from './IconTextInput';
-import styled from 'styled-components';
 import BasicInput from '../input/BasicInput';
 import InputLabel from '../input-label/InputLabel';
+import DropDown from '../input/DropDown';
+import styled from 'styled-components';
 
 export default {
   title: 'Textfield/Label-Textfield',
@@ -25,6 +25,16 @@ Basic.args = {
         placeholder="welcome@dgdr.co.kr"
         label={<InputLabel text="레이블" essential htmlFor="인풋" />}
       />
+    </>
+  ),
+};
+
+export const Drop = Template.bind({});
+Drop.args = {
+  children: (
+    <>
+      {/* <InputLabel text="레이블" essential htmlFor="인풋" /> */}
+      <DropDown title="선택" icon="arrow_bottom_small" />
     </>
   ),
 };

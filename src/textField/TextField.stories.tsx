@@ -25,20 +25,9 @@ Basic.args = {
   ),
 };
 
-export const label = Template.bind({});
-label.args = {
-  children: (
-    <>
-      <BasicInput
-        placeholder="welcome@dgdr.co.kr"
-        label={<InputLabel essential htmlFor="인풋" text="레이블" />}
-      />
-    </>
-  ),
-};
-
 export const Success = Template.bind({});
 Success.args = {
+  fullWidth: false,
   status: 'isSucess',
   children: (
     <>
