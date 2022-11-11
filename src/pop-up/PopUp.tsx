@@ -14,6 +14,10 @@ interface PopUpProps {
   icon?: ReactNode;
 }
 
+/**
+ *
+ * Todo 사실 팝업 컴포넌트도 컴파운드 컴포넌트로 만들어야함.
+ */
 export default function PopUp({
   popUpTitle,
   popUpContent,
