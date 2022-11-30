@@ -69,7 +69,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=df65348bf1ed"
   },
   "eslintConfig": {
     "extends": [
@@ -114,6 +115,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "chromatic": "^6.11.4",
     "prop-types": "^15.8.1",
     "storybook-dark-mode": "^1.1.2",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
@@ -174,5 +176,7 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "design-system@0.1.0"
 }
