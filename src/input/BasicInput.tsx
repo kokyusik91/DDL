@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import InputLabel from '../input-label/InputLabel';
 import theme from '../styles/theme';
 
-interface TextInputProps {
+type TextInputProps = {
   /** Input에 들어갈 placeholder 입니다. */
   placeholder?: string;
   /** Input의 현재 상태입니다. */
   status?: 'isSucess' | 'isError';
   disabled?: boolean;
   label?: ReactNode;
-}
+};
 
 const assignInputBorderColor = (status: 'isSucess' | 'isError') => {
   const colorChip = {

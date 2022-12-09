@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface BottomSheetButtonProps {
+type BottomSheetButtonProps = {
   /** `Single-button`컴포넌트가 들어옵니다. */
   children: ReactNode;
   /** BottomSheet-button의 너비를 나타냅니다. */
   fullWidth: boolean;
-}
+};
 
 export default function BottomSheetButton({
   children,

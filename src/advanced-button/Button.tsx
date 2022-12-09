@@ -5,7 +5,7 @@ import { default as Typo, TextType } from '../Typography/Typo';
 
 export type mainColor = 'Green' | 'Red' | 'White';
 
-interface ButtonProps {
+type ButtonProps = {
   /** Single-button에 들어갈 텍스트 입니다. */
   children: string;
   /** Single-button의 색상 입니다. */
@@ -21,7 +21,7 @@ interface ButtonProps {
   /** 커스텀 스타일 */
   customStyle?: CSSProperties;
   /** */
-}
+};
 
 export function assignButtonColor(colorType: mainColor): string {
   const colorChip = {

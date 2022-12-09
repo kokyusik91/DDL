@@ -5,7 +5,7 @@ import Icon from '../dgdr-Icon/Icon';
 import theme from '../styles/theme';
 import InputLabel from '../input-label/InputLabel';
 
-interface TextInputProps {
+type TextInputProps = {
   /** Input의 너비 입니다. */
   fullWidth?: boolean;
   /** Input에 들어갈 아이콘 컴포넌트 입니다 */
@@ -18,7 +18,7 @@ interface TextInputProps {
   errorMsg?: string;
   /** Input 컴포넌트 입니다. */
   children: ReactNode;
-}
+};
 
 export default function TextInput({
   fullWidth = false,

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface PopUpProps {
+type PopUpProps = {
   /** Pop-up 컴포넌트에 들어가는 제목입니다. */
   popUpTitle: string;
   /** Pop-up 컴포넌트에 들어가는 내용입니다. */
@@ -12,7 +12,7 @@ interface PopUpProps {
   fullWidth: boolean;
   /** Pop-up 컴포넌트 우측 상단에 들어가는 아이콘 입니다. */
   icon?: ReactNode;
-}
+};
 
 /**
  *

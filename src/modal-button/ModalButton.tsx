@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface ModalButtonProps {
+type ModalButtonProps = {
   /** `Single-button` 혹은 `Multiple-button` 컴포넌트가 들어옵니다. */
   children: ReactNode;
   /** Modal-button의 너비를 나타냅니다. */
   fullWidth: boolean;
-}
+};
 
 export default function ModalButton({
   children,

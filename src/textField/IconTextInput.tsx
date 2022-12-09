@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import Icon from '../dgdr-Icon/Icon';
 import theme from '../styles/theme';
 
-interface TextInputProps {
+type TextInputProps = {
   /** Input에 들어갈 placeholder 입니다. */
   placeholder?: string;
   /** Input의 현재 상태입니다. */
   status?: 'isSucess' | 'isError';
   /** Input에 들어갈 아이콘 컴포넌트 입니다 */
   fullWidth?: boolean;
-}
+};
 
 function IconTextInput({
   placeholder = 'placeholder',

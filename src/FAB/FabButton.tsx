@@ -3,14 +3,14 @@ import { mainColor, assignButtonColor } from '../advanced-button/Button';
 import { default as Icon, IconType } from '../dgdr-Icon/Icon';
 import theme from '../styles/theme';
 
-interface FabButtonProps {
+type FabButtonProps = {
   /** FAB-button의 색상 입니다. */
   buttonColor: 'Green' | 'Red';
   /** FAB-button에 들어갈 아이콘 타입입니다. */
   iconType: IconType;
   /** FAB-button에 들어갈 아이콘 색상입니다. */
   iconColor: string;
-}
+};
 //
 
 export default function FabButton({

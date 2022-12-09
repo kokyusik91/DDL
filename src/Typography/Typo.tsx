@@ -27,13 +27,13 @@ export type TextType =
   | 'sub1_M_line'
   | 'sub2_line';
 
-interface TypoProps {
+type TypoProps = {
   /** 텍스트 */
   children: string | ReactNode;
   /** 텍스트 타입 */
   type: TextType;
   isNumber?: boolean;
-}
+};
 
 /**
  *

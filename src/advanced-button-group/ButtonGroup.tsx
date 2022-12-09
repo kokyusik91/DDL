@@ -1,14 +1,14 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface ButtonGroupProps {
+type ButtonGroupProps = {
   /** Single-button 컴포넌트가 들어옵니다. */
   children: ReactNode;
   /** 버튼 사이 간격 입니다. */
   gap: number;
   /** Multiple-button의 너비를 나타냅니다. */
   fullWidth?: boolean;
-}
+};
 
 export default function ButtonGroup({
   children,
