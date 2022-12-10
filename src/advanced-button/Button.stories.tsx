@@ -12,7 +12,11 @@ export default {
   decorators: [(Story) => <Story />],
 } as Meta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => {
+  // arg에는 각각의 Template에 bind 한 값이 들어간다.
+  console.log('args', args);
+  return <Button {...args} />;
+};
 
 export const Green = Template.bind({});
 Green.args = {
