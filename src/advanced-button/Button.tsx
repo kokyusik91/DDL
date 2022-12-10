@@ -80,6 +80,7 @@ const DDLButton = styled.button<{
   cursor: pointer;
   ${(props) => assginText(props.textType)};
   color: ${(props) =>
+    // 버튼의 컬러가 흰색 이거나 disabled상태 일때는
     props.buttonColor === 'White' || props.disabled
       ? theme.palette.grey[600]
       : theme.palette.grey[100]};
