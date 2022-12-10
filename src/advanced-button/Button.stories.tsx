@@ -9,7 +9,8 @@ export default {
   parameters: {
     componentSubtitle: 'DGDR 서비스에서 사용하는 버튼을 정의합니다.',
   },
-  decorators: [(Story) => <Story />],
+  // decorators를 추가하니 No Display Name이라고 나옴....
+  // decorators: [(Story) => <Story />],
 } as Meta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => {
