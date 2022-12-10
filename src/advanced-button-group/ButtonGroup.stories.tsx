@@ -9,7 +9,7 @@ export default {
   parameter: {
     componentSubtitle: 'DGDR 서비스에서 사용하는 버튼 그룹을 정의합니다.',
   },
-  decorators: [(Story) => <Story />],
+  // decorators: [(Story) => <Story />],
 } as Meta<typeof ButtonGroup>;
 
 const Template: ComponentStory<typeof ButtonGroup> = (args) => (
